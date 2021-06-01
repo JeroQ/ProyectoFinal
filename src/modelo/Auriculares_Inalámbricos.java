@@ -7,7 +7,7 @@ package modelo;
 
 /**
  *
- * @author JSIMP
+ * @author Jeronimo
  */
 public class Auriculares_Inalámbricos {
     
