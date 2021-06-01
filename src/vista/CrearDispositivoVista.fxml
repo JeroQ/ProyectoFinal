@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="528.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.CrearDispositivoControlador">
+   <children>
+      <Label layoutX="10.0" layoutY="14.0" text="CREAR DISPOSITIVO">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Separator layoutX="14.0" layoutY="109.0" prefHeight="8.0" prefWidth="740.0" />
+      <Button fx:id="btnGuardar" defaultButton="true" layoutX="277.0" layoutY="462.0" mnemonicParsing="false" onAction="#btnGuardar_click" text="Guardar" />
+      <Button fx:id="btnCancelar" layoutX="414.0" layoutY="462.0" mnemonicParsing="false" onAction="#btnCancelar_click" text="Cancelar" />
+      <Label layoutX="22.0" layoutY="73.0" text="Seleccione dispositivo que desea crear:" />
+      <ComboBox fx:id="cbxListDisp" layoutX="290.0" layoutY="68.0" onAction="#cbxListDisp_Select" prefHeight="31.0" prefWidth="469.0" promptText="Selecciones Dispositivo" />
+      <Pane fx:id="AuricularesPanel" layoutX="20.0" layoutY="125.0" prefHeight="306.0" prefWidth="740.0" visible="false">
+         <children>
+            <Label layoutX="6.0" layoutY="14.0" text="Nombre de dispositivo:" />
+            <TextField fx:id="txtNomAuriculares" layoutX="206.0" layoutY="9.0" prefHeight="31.0" prefWidth="532.0" />
+            <Label layoutX="6.0" layoutY="54.0" text="Dispositivos para sincronizar:" />
+            <ListView fx:id="lstvDispositivosSincro" layoutX="206.0" layoutY="53.0" prefHeight="243.0" prefWidth="532.0" />
+         </children>
+      </Pane>
+      <Pane fx:id="dispositivoPanel" layoutX="20.0" layoutY="125.0" prefHeight="306.0" prefWidth="740.0">
+         <children>
+            <Label layoutY="97.0" text="Correo Electronico:" />
+            <TextField fx:id="txtCorreo" layoutX="170.0" layoutY="92.0" prefHeight="31.0" prefWidth="570.0" />
+            <Label layoutY="29.0" text="Nombre del dispositivo" />
+            <TextField fx:id="txtNombre" layoutX="171.0" layoutY="24.0" prefHeight="31.0" prefWidth="570.0" />
+            <CheckBox fx:id="checkBoxVisible" layoutX="170.0" layoutY="224.0" mnemonicParsing="false" selected="true" text="¿Visible?" />
+            <CheckBox fx:id="checkBoxEnsendido" layoutX="171.0" layoutY="173.0" mnemonicParsing="false" selected="true" text="Ensendido" />
+         </children>
+      </Pane>
+      <Pane fx:id="SmartphonePanel" layoutX="30.0" layoutY="135.0" prefHeight="306.0" prefWidth="740.0" visible="false">
+         <children>
+            <Label layoutY="67.0" text="Correo Electronico:" />
+            <TextField fx:id="txtCorreoSmartPhone" layoutX="170.0" layoutY="62.0" prefHeight="31.0" prefWidth="570.0" />
+            <Label layoutY="19.0" text="Nombre del dispositivo" />
+            <TextField fx:id="txtNombreSmarphone" layoutX="171.0" layoutY="14.0" prefHeight="31.0" prefWidth="570.0" />
+            <CheckBox fx:id="checkBoxVisiblecel" layoutX="170.0" layoutY="184.0" mnemonicParsing="false" selected="true" text="¿Visible?" />
+            <CheckBox fx:id="checkBoxEnsendidocel" layoutX="171.0" layoutY="133.0" mnemonicParsing="false" selected="true" text="Ensendido" />
+            <Label layoutX="3.0" layoutY="239.0" text="Número teléfonico:" />
+            <TextField fx:id="txtNumTelSmartphone" layoutX="168.0" layoutY="234.0" prefHeight="31.0" prefWidth="570.0" />
+         </children>
+      </Pane>
+      <Separator layoutX="20.0" layoutY="431.0" prefHeight="8.0" prefWidth="740.0" />
+   </children>
+</AnchorPane>
